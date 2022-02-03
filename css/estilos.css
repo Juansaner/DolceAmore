@@ -1,0 +1,452 @@
+*{
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root{
+    --pink: #FF7EBC;
+    --pink-light: #ffa1cd;
+    --pink-dark: #dd5094 ;
+    --black: #000000;
+    --gray: #F1EFEB;
+    --white: #FFFFFF;
+}
+body{
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+p{
+    font-size: 22px;
+}
+/* --------*/
+/* Header */
+/* -------*/
+.contenido-header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/cupcake.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contenido-header .fondo {
+    width: 50%;
+    height: 100%;
+    max-width: 100%;
+    background-image: url(../images/chispas.png);
+}
+.contenido-header .logo {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url(../images/dolceA.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* --------*/
+/* NAVBAR */
+/* -------*/
+
+.menu {
+    background-color: var(--pink);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+    margin-bottom: 60px;
+}
+.menu a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 26px;
+background-color: var(--pink);
+margin: 0 10px ;
+transition: .5s ease all;
+color: var(--white);
+text-decoration: none;
+}
+.menu a:hover {
+    transform: translateY(18px);
+    background-color: var(--pink-light);
+}
+/* --------*/
+/* NOSOTROS*/
+/* -------*/
+.nosotros {
+    margin-bottom: 60px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    color: var(--pink-dark);
+    font-family: 'Oswald', serif;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.subtitulo span{
+    background-color: var(--gray) ;
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .3);
+}
+.subtitulo::after{
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: var(--pink-dark);
+    position: relative;
+    top: -29px;
+    z-index: 1;
+}
+.nosotros .titulo{
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+/* --------*/
+/* PRODUCTOS*/
+/* -------*/
+.productos {
+    position: relative;
+display: flex;
+justify-content: space-evenly;
+background-color: var(--gray);
+margin-bottom: 60px;
+padding-top: 30px;
+padding-bottom: 30px;
+padding-right: 30px;
+padding-left: 30px;
+box-shadow: 0 0 6px 0 rgba(0, 0, 0, .3);
+   
+}
+.productos .titulo{
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.productos .producto{
+   position: relative;
+   width: 100%;
+}
+.productos .overlay{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--pink-dark);
+    overflow:hidden ;
+    transition: .5s ease;
+}
+.productos .producto:hover .overlay{
+    width: 100%;
+    opacity: .8;
+}
+.productos .producto .overlay-texto {
+top: 50%;
+left: 50%;
+position: absolute;
+white-space: nowrap;
+color: var(--white);
+font-size: 18px;
+transform: translate(-50%, -50%);
+overflow: hidden;
+border-top: 1px solid #FFFFFF;
+border-bottom: 1px solid #FFFFFF;
+}
+.productos .btn-productos {
+    background-color: var(--pink);
+    color: #FFFFFF;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: .3s ease;
+    
+}
+.productos .btn-productos:hover {
+background-color: transparent;
+border: 2px solid var(--pink);
+color: var(--pink);
+}
+/* --------*/
+/* SEPARADOR*/
+/* -------*/
+.separador{
+    width: 100%;
+    height: 250px;
+    background-image: url('../images/separador.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 60px;
+}
+.separador p {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    padding: 10px;
+}
+/* --------*/
+/* ACERCA DE*/
+/* -------*/
+.acerca-de {
+    margin-bottom: 60px;
+}
+/* --------*/
+/* GALERIA*/
+/* -------*/
+.galeria {
+    margin-bottom: 60px;
+}
+.galeria img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+.contacto {
+    margin-bottom: 60px;
+    
+}
+.redes-sociales {
+    padding: 18px;
+    background-color: var(--pink);
+}
+.redes-sociales img {
+    padding: 5px;
+    border-radius: 100%;
+    width: 50px;
+    transition: .3s ease all;
+}
+.redes-sociales img:hover {
+transform: scale(1.2);
+}
+
+/* --------*/
+/* MEDIA QUERY*/
+/* -------*/
+@media screen and (max-width: 992px){
+    p{
+        font-size: 18px;
+    }
+}
+.menu a {
+    font-size: 20px;
+}
+.nosotros .titulo, .productos .titulo{
+    font-size: 30px;
+}
+
+/* --------*/
+/* GALERIA*/
+/* -------*/
+
+.item-img {
+    max-width: 100%;
+    display: block;
+}
+
+.galery {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+}
+
+.item {
+cursor: pointer;
+box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+transition: all 300ms;
+position: relative;
+}
+
+.item-text {
+    padding: 1em;
+}
+
+.item::after{
+    content: "";
+    background-color: rgba(255, 169, 216, .1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    opacity: 0;
+}
+.item:hover{
+    transform: scale(1.05);
+}
+
+.item:hover:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media screen and (min-width: 400px) {
+    
+    .galery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    
+    .galery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* --------*/
+/* SERVICIOS*/
+/* -------*/
+.contenedor-sobre-servicio {
+display: flex;
+justify-content: space-evenly;
+background-color: var(--gray);
+margin-bottom: 50px;
+padding-top: 30px;
+padding-bottom: 30px;
+padding-right: 30px;
+padding-left: 30px;
+box-shadow: 0 0 6px 0 rgba(0, 0, 0, .3);
+}
+
+.imagen-servicio {
+    width: 38%;
+    max-width: 38%;
+    display: flex;
+}
+
+.servicio .contenido-texto {
+    width: 48%; 
+}
+
+.contenido-texto h2 {
+margin-bottom: 15px;
+text-align: justify;
+padding-top: 50px;
+}
+
+.contenido-texto p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+	position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 55px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: var(--pink);
+	opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -16px;
+    width: 15px;
+}
+
+.carousel__siguiente {
+	right: -15px;
+    width: 15px;
+}
+
+.carousel__lista {
+	overflow: hidden;
+}
+
+.carousel__elemento {
+	text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: var(--pink);
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		padding: 40px 0;
+	}
+
+	.container {
+		flex-direction: column;
+	}
+
+	.container > * {
+		width: 100%;
+	}
+}
+
+/* --- --- PIE DE PÁGINA --- --- */
+.pie-pagina{
+    padding: 18px;
+    background-color: var(--pink);
+}
+.pie-pagina img {
+    padding: 2px;
+    border-radius: 100%;
+    width: 100px;
+    transition: .3s ease all;
+}
+
+.pie-pagina img:hover {
+    transform: scale(1.2);
+    }
